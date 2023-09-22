@@ -37,13 +37,13 @@ public class CatDemonAmbient : MonoBehaviour
         timer += Time.deltaTime;
         if(timer > timeTillNextEvent){
             if(catDemonSoundPlaying){
-                StartCoroutine(FadeScaryDramatic(catDemonSoundAudioSource.volume, 0, fadeTime));
+                StartCoroutine(FadeCatDemonSound(catDemonSoundAudioSource.volume, 0, fadeTime));
                 catDemonSoundPlaying = false;
                 RandomiseValues();
                 timeTillNextEvent = timeOff + fadeTime;
             }
             else if(!catDemonSoundPlaying){
-                StartCoroutine(FadeScaryDramatic(0, scaryDramaticVol, fadeTime));
+                StartCoroutine(FadeCatDemonSound(0, scaryDramaticVol, fadeTime));
                 catDemonSoundPlaying = true;
                 RandomiseValues();
                 timeTillNextEvent = timeOn + fadeTime;
@@ -61,7 +61,7 @@ public class CatDemonAmbient : MonoBehaviour
 
     }
 
-    IEnumerator FadeScaryDramatic(float startValue, float endValue, float duration)
+    IEnumerator FadeCatDemonSound(float startValue, float endValue, float duration)
     {
         float currentTime = 0;
         while (currentTime <= duration){
