@@ -5,15 +5,17 @@
 
 A Horror First Person game that takes place in a haunted cat sanctuary.
 
+Story:
 
-- Real world prizes fulfilled by Amazon.com
-- Streamer generated tournaments through Twitch.
-
-Here is a simple game that incorporates the GameOn APIs to give developers an idea on how to create such experiences.
+A Person looking for a new job to get away from home finally gets a job at a cat sanctuary. The Cat sanctuary hides its dark past behind the dark veil of night.  Strange Events occur as the night arrives. Now, it is up to you to save the cats by destroying the cursed demon that haunts that sanctuary by collecting the leftover body parts of the previous care taker and by burying them in the town graveyard. 
 
 You can play the game here
 
 * [itch.io](https://rawal-sky.itch.io/cat-sanctuary)
+
+### Game Trailer
+
+[<img src="https://i9.ytimg.com/vi_webp/6tmgfxPicvE/mq1.webp?sqp=CJz5tKgG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgNShmMA8=&rs=AOn4CLCyeuvR4Am5aLjY0YVg0NAIZeo6Jg" width="50%">](https://www.youtube.com/watch?v=6tmgfxPicvE "Cat Sanctuary trailer")
 
 
 ## Getting Started
@@ -25,54 +27,51 @@ You can play the game here
 
 ### Setup
 
-In the Assets -\> Scripts folder there are many scripts. 
+You can play the deployed version of the game from the above mentioned itch.io page or download this repository and open it in unity and play the game and also build it by goinf to file / build setting / then click build.
 
-![.github/images/gameon-unity-sample-game-behaviors.png](.github/images/gameon-unity-sample-game-behaviors.png)
+
+
+https://github.com/Amna-Hassan04/Cat-Sanctuary/assets/88897729/2387ba49-6c8b-4cbe-8ee4-2ce5c738c3e4
+
+
 
 #### Scripts
-
-
- - NoteTrigger.cs: This class pops up a letter UI in front of player. 
+In the Assets -\> Scripts folder there are many scripts. 
+   
  - /Triggers': These are classes that are used to trigger events such as turning lights off, turning on a jump trigger of a zombie etc.
- - 
- - /Footsteps: These are classes that are used to check which kind of ground the player is standing on and then plays a footstep sound according to it. 
+   
+ - /Footsteps: These are classes that are used to check which kind of ground the player is standing on and then plays a footstep sound according to it.
+
+ - NoteTrigger.cs: This class pops up a letter UI in front of player.
 
  - CatDemonErode.cs: this is invoked after player collects the frozen orb. This class erodes the enemy cat demon using a fesnol and erode shader made with unity shader graph.
 
- - MenuHandler.cs: It manages the main menu of the game. It also manages the buttons. 
+ - MenuHandler.cs: It manages the main menu of the game. It also manages the buttons.
 
-#### Game behavior
+ - ToggleLight.cs: It turns the flashlight on or off.
 
-- FollowCamera.cs: This class is attached to the camera to follow the main player, and to be limited to the level boundaries.
+ - grave.cs: It checks if player has all the required body parts to bury and then loads the game end scene.
 
-- Goal.cs: This is attached to an object that when touched, would trigger the a win state.
 
-- Level.cs: This is attached to a level to give the object with FollowCamera attached to it boundaries.
 
-- NewSpawnPoint.cs: An object with this attached to it will become the new checkpoint onEnterTrigger.
+#### Game Inspector
 
-### Running the Game
-- Open the solution with a supported Unity3D Game Engine.
-- Start the "mainMenu" scene from the scenes folder
+This is the scene in unity where the game level is made. 
 
-  ![.github/images/gameon-unity-sample-game-mainMenu-scene-selection.png](.github/images/gameon-unity-sample-game-mainMenu-scene-selection.png)
+https://github.com/Amna-Hassan04/Cat-Sanctuary/assets/88897729/dbe354c3-7400-460d-9222-63e26c657628
 
-- Make sure that the Scenes in the build settings look like this:
+The Gmae Objects in the inspector have all the scripts attached to make the game work. 
 
-  ![.github/images/gameon-unity-sample-game-build-settings.png](.github/images/gameon-unity-sample-game-build-settings.png)
-  
-### Security Consideration
+- Fpscontroller: it has scripts such as footsteps.cs, freezeOrbSpell.cs, and bodyburry.cs attached. On its child objects such as flashlights and audio objects toggle.cs is attached and on audio objects two 
+                 scripts for handling ambient audio for the scenes are attached i.e ScaryDramaticAudio.cs and CatDemonAmbient.cs.
+- UI Canvases: It has all the texts that will be shown.
 
-The game implements GameOn calls directly from the client, which is not the most secure. Its suggested to use a server in-between the client and the GameOn API.
+- Enemies: It has all the enemy objects as a child. They will be activated by a trigger.
+- Temple, Environment, PetCemetry: They have all the models and prefabs that make up the level.
+- post processing: This is the main reason for the mood and look of the game. It is the post processing effects of unity's urp that adds effects like vignette, depth of field, color adjustments etc.  
 
-## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-By downloading the GameOn Unity Sample Game, you agree to Amazon’s [Conditions of Use](https://www.amazon.com/gp/help/customer/display.html?nodeId=508088), [Terms of Use](https://www.amazon.com/gp/help/customer/display.html?nodeId=201485660), and [Privacy Notice](https://www.amazon.com/gp/help/customer/display.html?nodeId=468496).
 
-[Bouncy Castle license](http://www.bouncycastle.org/csharp/licence.html) applies to both the source code and the game.
