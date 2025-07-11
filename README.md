@@ -15,7 +15,8 @@ You can play the game here
 
 ### Game Trailer
 
-[<img src="https://i9.ytimg.com/vi_webp/6tmgfxPicvE/mq1.webp?sqp=CJz5tKgG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgNShmMA8=&rs=AOn4CLCyeuvR4Am5aLjY0YVg0NAIZeo6Jg" width="50%">](https://www.youtube.com/watch?v=6tmgfxPicvE "Cat Sanctuary trailer")
+[![Watch the trailer](https://img.youtube.com/vi/6tmgfxPicvE/hqdefault.jpg)](https://www.youtube.com/watch?v=6tmgfxPicvE)
+
 
 
 ## Getting Started
