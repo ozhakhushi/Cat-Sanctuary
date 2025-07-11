@@ -61,7 +61,7 @@ This is the scene in unity where the game level is made.
 
 https://github.com/Amna-Hassan04/Cat-Sanctuary/assets/88897729/dbe354c3-7400-460d-9222-63e26c657628
 
-The Gmae Objects in the inspector have all the scripts attached to make the game work. 
+The Game Objects in the inspector have all the scripts attached to make the game work. 
 
 - Fpscontroller: it has scripts such as footsteps.cs, freezeOrbSpell.cs, and bodyburry.cs attached. On its child objects such as flashlights and audio objects toggle.cs is attached and on audio objects two 
                  scripts for handling ambient audio for the scenes are attached i.e ScaryDramaticAudio.cs and CatDemonAmbient.cs.
